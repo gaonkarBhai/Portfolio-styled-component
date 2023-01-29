@@ -1,29 +1,29 @@
-import React from 'react'
+
+
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components'
 import { Button } from './styles/Button';
-
-const Herosection = () => {
+const Herosection = (props) => {
     return (
         <Wrapper>
             <div className="container grid grid-two-column">
                 <div className="section-hero-data">
                     <p className='para-less-important'>THIS IS ME</p>
-                    <h1 className='name'>CapitalCrest</h1>
-                    <p className='para-important'>As CapitalCrest, I am a highly experienced web developer with a proven track record of delivering high-quality and innovative websites. I specialize in using modern technologies to create responsive and dynamic websites that meet the needs of my clients.</p>
+                    <h1 className='name'>{props.name}</h1>
+                    <p className='para-important'>{props.desc}</p>
                     <Button className="btn hire-me">
                         <NavLink to='/contact'>Hire Me</NavLink>
                     </Button>
                 </div>
                 <div className="section-hero-image">
-                    <img src="images/hero.png" alt="profile" />
+                    <img src={props.image} alt="profile" />
                 </div>
-
             </div>
         </Wrapper>
     );
 }
 const Wrapper = styled.section`
+margin-top: 5rem;
 .section-hero-data{
     width: 70rem;
     margin-left: 5rem;
@@ -44,8 +44,23 @@ img{
         transition: all .8s linear;
         transform: translateX(-500px) rotate(45deg);
     }
+    &::after{
+        position: absolute;
+        content: "";
+        height: 5px;
+        width: 0%;
+        background-color: ${({theme})=> theme.colors.helper};
+        opacity: 0;
+        transition: all .8s linear;
+        top: 8rem;
+        left: -2rem;
+    }
     &:hover:before{
         transform: translateX(500px) rotate(45deg);
+    }
+    &:hover:after{
+        opacity: 1;
+        width: 80%;
     }
 }
 .container{
