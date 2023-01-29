@@ -10,6 +10,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Error from './Error';
 import { GlobalStyle } from './GlobalStyle';
+import GotoTop from './components/GotoTop';
 
 const App = () => {
     const theme = {
@@ -28,7 +29,7 @@ const App = () => {
     return (
         <React.Fragment>
             <ThemeProvider theme={theme}>
-                <GlobalStyle/>
+                <GlobalStyle />
                 <Navbar />
                 <Routes>
                     <Route path='/' element={<Home />} />
@@ -37,6 +38,8 @@ const App = () => {
                     <Route path='/service' element={<Services />} />
                     <Route path='*' element={<Error />} />
                 </Routes>
+                <GotoTop/>
+
                 <Footer />
             </ThemeProvider>
         </React.Fragment>

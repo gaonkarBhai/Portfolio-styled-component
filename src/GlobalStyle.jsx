@@ -18,7 +18,6 @@ html{
    background-color: #fff;
 }
 ::-webkit-scrollbar-thumb{
-
    background-color: blue;
   border-radius: 5px;
 }
