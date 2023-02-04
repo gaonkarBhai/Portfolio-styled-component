@@ -80,6 +80,14 @@ h2{
         font-size: 1.7rem;
     }
 }
+@media (max-width:500px){
+    .box{
+        flex-direction: column;
+        div {
+            width: 290px;
+        }
+    }
+}
 `
 
 

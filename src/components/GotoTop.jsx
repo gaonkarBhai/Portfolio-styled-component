@@ -45,12 +45,6 @@ const Wrapper = styled.section`
     top: 598px;
     }
 }
-/* @media (max-width:575px) {
-    .top-btn{
-    right: 18px;
-    top: 611px;
-    }
-} */
 
 @media (max-width:500px) {
     .top-btn{
