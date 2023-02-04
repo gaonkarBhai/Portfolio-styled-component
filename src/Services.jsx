@@ -12,7 +12,7 @@ const Services = () => {
                         {
                             servicesapi.map((ele) => {
                                 return (
-                                    <div className='box flex'>
+                                    <div className='box flex' key={ele.id}>
                             <div className="img">
                                 <img src={ele.img} alt="" />
                             </div>
@@ -67,6 +67,17 @@ h2{
     }
     &:hover h3{
         font-size: 3rem;
+    }
+}
+@media (max-width:1000px) {
+    .grid-two-column{
+        grid-template-columns: repeat(1,1fr);
+    }
+    h3{
+        font-size: 3rem;
+    }
+    .box p{
+        font-size: 1.7rem;
     }
 }
 `

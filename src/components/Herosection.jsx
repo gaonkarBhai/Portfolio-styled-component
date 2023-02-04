@@ -21,7 +21,8 @@ const Herosection = (props) => {
             </div>
         </Wrapper>
     );
-}
+};
+
 const Wrapper = styled.section`
 margin-top: 5rem;
 .section-hero-data{
@@ -67,6 +68,50 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+@media (max-width:1170px) {
+    img{
+    width: 600px;
+}
+}
+@media (max-width:1020px) {
+    img{
+    width: 500px;
+    }
+.section-hero-data h1{
+    font-size:5rem !important;
+    width:50rem;
+}
+.grid{
+    flex-direction: column-reverse;
+}
+}
+@media (max-width:1020px) {
+    .section-hero-data{
+        width: 60rem;
+    }
+}
+@media (max-width:620px) {
+    .section-hero-data{
+        width: 50rem;
+    }
+}
+@media (max-width:500px) {
+    margin-top: 1rem;
+    img{
+    width: 400px;
+}
+    .section-hero-data{
+        width: 30rem;
+        margin: 0;
+        h1{
+            display: inline-block !important;
+            font-size: 3rem !important;
+        }
+        p{
+            font-size: 1.3rem;
+        }
+    }
 }
 `
 

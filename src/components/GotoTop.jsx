@@ -39,5 +39,24 @@ const Wrapper = styled.section`
         transform: translateY(.5rem);
     }
 }
+@media (max-width:1000px) {
+    .top-btn{
+    right: 40px;
+    top: 598px;
+    }
+}
+/* @media (max-width:575px) {
+    .top-btn{
+    right: 18px;
+    top: 611px;
+    }
+} */
+
+@media (max-width:500px) {
+    .top-btn{
+    right: 128px;
+    top: 679px;
+    }
+}
 `
 export default GotoTop
