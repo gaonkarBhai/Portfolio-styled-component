@@ -1,11 +1,7 @@
 
-### portfolio of random guy build using - styled component
+# portfolio of random guy build using - styled component
 
-
-
-## Host Lint
-✔ [Click Here](https://styled-compo.netlify.app/)
-### Authors
+### Author
 
 - [@Naveen](https://github.com/gaonkarBhai)
 
